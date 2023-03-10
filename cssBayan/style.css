@@ -17,7 +17,7 @@ body{
     font-size: 3.5rem;
     width: 75%;
     margin: auto;
-    padding: 10px;
+    padding: 1rem;
 }
 
 .container{
@@ -32,13 +32,14 @@ body{
 }
 
 .item{
-    margin: 10px;
-    border-top: 3px solid #f8d8a7;
+    padding: 1rem;
+    border-top: 0.2rem solid #f8d8a7;
     cursor:inherit;
 }
 
 .item__label{
     cursor:inherit;
+    transition: 0.5s;
 }
 .item__label div{
     display: inline-block;
@@ -48,11 +49,15 @@ body{
 .item__label i{
     transition-duration: .5s;
 }
+
+.item__label-img{
+    display: block;
+}
 .item__checkbox{
     display: none;
 }
 
-.item__checkbox:checked~.item__img{
+.item__checkbox:checked+label>.item__img{
     visibility: visible;
     width: 50%;
     opacity: 1;
@@ -62,7 +67,11 @@ body{
     transform: rotate(45deg);
 }
 
-.item:hover>.item__img{
+.item__checkbox:hover~.item__label i{
+    transform: rotate(45deg);
+}
+
+.item:hover>label>.item__img{
     visibility: visible;
     width: 50%;
     opacity: 1;
@@ -75,6 +84,7 @@ body{
 }
 
 .item__img{
+    padding: .7rem;
     display: block;
     visibility: hidden;
     opacity: 0;
@@ -84,3 +94,6 @@ body{
     transition-duration: .7s;
 }
 
+.item__checkbox:active +.item__label{
+    opacity: 0.5;
+}
