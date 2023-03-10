@@ -2,29 +2,30 @@
 
 *{
     box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
 }
 
 body{
     background-color: #ffebcd;
     width:100vw;
-    overflow-x: hidden;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 3rem;
+    overflow-x: hidden;    
 }
 
 .header-title{
     font-size: 3.5rem;
-    width: 75%;
+    width: 65%;
     margin: auto;
-    padding: 1rem;
+    padding: .6rem;
 }
 
 .container{
-    width: 75%;
+    width: 65%;
     margin: auto;
     cursor: pointer;
     color:blue;
+    font-size: 3rem;
+    padding: .6rem;
 }
 
 .container:hover{
@@ -32,15 +33,15 @@ body{
 }
 
 .item{
-    padding: 1rem;
+    padding: .6rem;
     border-top: 0.2rem solid #f8d8a7;
     cursor:inherit;
 }
 
 .item__label{
     cursor:inherit;
-    transition: 0.5s;
 }
+
 .item__label div{
     display: inline-block;
     width:90%;    
@@ -53,32 +54,32 @@ body{
 .item__label-img{
     display: block;
 }
-.item__checkbox{
+.item__radio{
     display: none;
 }
 
-.item__checkbox:checked+label>.item__img{
-    visibility: visible;
-    width: 50%;
+.item__radio:checked+.item__label>.item__img{
+    /* visibility: visible; */
+    width: 40%;
     opacity: 1;
 }
 
-.item__checkbox:checked~.item__label i{
+.item__radio:checked+.item__label i{
     transform: rotate(45deg);
 }
 
-.item__checkbox:hover~.item__label i{
+.item__radio:hover+.item__label i{
     transform: rotate(45deg);
 }
 
-.item:hover>label>.item__img{
-    visibility: visible;
-    width: 50%;
+.item__radio:hover+.item__label>.item__img{
+    /* visibility: visible; */
+    width: 40%;
     opacity: 1;
 }
 
 
-.item__checkbox:checked~.item__label{
+.item__radio:checked+.item__label{
     color:black;
 
 }
@@ -86,14 +87,14 @@ body{
 .item__img{
     padding: .7rem;
     display: block;
-    visibility: hidden;
+    /* visibility: hidden; */
     opacity: 0;
     width: 0;
     margin:auto;
     cursor:inherit;
-    transition-duration: .7s;
+    transition-duration: .6s;
 }
 
-.item__checkbox:active +.item__label{
-    opacity: 0.5;
+.item__radio:active+.item__label{
+    opacity: 0.6;
 }
