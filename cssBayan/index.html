@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>cssBayan</title>
 </head>
 <body>
@@ -16,13 +17,20 @@
     <main>
         <div class="container">
             <div class="item">
-                <input class="item__checkbox" type="checkbox" id="meme1" checked="true">
-                <label class="item__label" for="meme1">Stop calling me mr. Fluffy</label>
+                <input class="item__checkbox" type="radio" name="memes"id="meme1" checked="true">
+                <label class="item__label" for="meme1">
+                    <div>Stop calling me mr. Fluffy</div>
+                    <i class="fa-solid fa-plus"></i>
+                </label>
+
                 <img class="item__img" src="assets/img/meme1.jpg" alt="not happy cat">
             </div>
             <div class="item">
-                <input class="item__checkbox" type="checkbox" id="meme2">
-                <label class="item__label" for="meme2">Are those new cats memes on rd?!</label>
+                <input class="item__checkbox" type="radio" name="memes" id="meme2">
+                <label class="item__label" for="meme2">
+                    <div>Are those new cats memes on rd?!</div>
+                    <i class="fa-solid fa-plus"></i>
+                </label>
                 <img class="item__img" src="assets/img/meme2.jpg" alt="cat">
             </div>
         </div>

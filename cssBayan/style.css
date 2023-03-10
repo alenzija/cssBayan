@@ -10,11 +10,11 @@ body{
     overflow-x: hidden;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3rem;
 }
 
 .header-title{
-    font-size: 56px;
+    font-size: 3.5rem;
     width: 75%;
     margin: auto;
     padding: 10px;
@@ -40,13 +40,34 @@ body{
 .item__label{
     cursor:inherit;
 }
+.item__label div{
+    display: inline-block;
+    width:90%;    
+    transition-duration: .3s;
+}
+.item__label i{
+    transition-duration: .5s;
+}
 .item__checkbox{
     display: none;
 }
 
 .item__checkbox:checked~.item__img{
-    display: block;
+    visibility: visible;
+    width: 50%;
+    opacity: 1;
 }
+
+.item__checkbox:checked~.item__label i{
+    transform: rotate(45deg);
+}
+
+.item:hover>.item__img{
+    visibility: visible;
+    width: 50%;
+    opacity: 1;
+}
+
 
 .item__checkbox:checked~.item__label{
     color:black;
@@ -54,9 +75,12 @@ body{
 }
 
 .item__img{
-    display:none;
-    width: 50%;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
     margin:auto;
     cursor:inherit;
+    transition-duration: .7s;
 }
 
