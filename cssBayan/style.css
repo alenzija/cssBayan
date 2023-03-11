@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
 
-*{
+html{
     box-sizing: border-box;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
@@ -13,14 +13,13 @@ body{
 }
 
 .header-title{
-    font-size: 3.5rem;
-    width: 65%;
-    margin: auto;
-    padding: .6rem;
+    font-size: 3.75rem;
+    color: black;
+    padding: 0.6rem;
 }
 
 .container{
-    width: 65%;
+    width: 70%;
     margin: auto;
     cursor: pointer;
     color:blue;
@@ -60,7 +59,7 @@ body{
 
 .item__radio:checked+.item__label>.item__img{
     /* visibility: visible; */
-    width: 40%;
+    width: 45%;
     opacity: 1;
 }
 
@@ -74,7 +73,7 @@ body{
 
 .item__radio:hover+.item__label>.item__img{
     /* visibility: visible; */
-    width: 40%;
+    width: 45%;
     opacity: 1;
 }
 
@@ -98,3 +97,28 @@ body{
 .item__radio:active+.item__label{
     opacity: 0.6;
 }
+
+@media  screen and (max-width:820px) {
+    .header-title{
+        font-size:2.5rem;
+    }
+    .container{
+        width:90%;
+        font-size: 1.3rem;
+    }
+    .item__radio:checked+.item__label>.item__img{
+        width: 70%;
+    }
+} 
+@media  screen and (max-width:320px) {
+    .header-title{
+        font-size:1.5rem;
+    }
+    .container{
+        width:95%;
+        font-size: 1rem;
+    }
+    .item__radio:checked+.item__label>.item__img{
+        width: 90%;
+    }
+} 
