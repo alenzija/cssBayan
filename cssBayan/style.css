@@ -41,7 +41,7 @@ body{
     cursor:inherit;
 }
 
-.item__label div{
+.item__label span{
     display: inline-block;
     width:90%;    
     transition-duration: .3s;
