@@ -116,6 +116,15 @@ body{
     
     .container:hover{
         color:black;
+
+    }
+
+    .container i{
+        opacity: 0;
+    }
+
+    .container:hover i{
+        opacity: 1;
     }
 
     .item__radio:hover+.item__label i{
