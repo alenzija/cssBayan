@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+html{
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+}
+
+body{
+    background-color: #ffebcd;
+    width:100vw;
+    overflow-x: hidden;    
+}
+
+.header-title{
+    font-size: 1.5rem;
+    color: black;
+    padding: 0.5rem;
+}
+
+.container{
+    width: 95%;
+    margin: auto;
+    color:blue;
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+.item{
+    padding: .5rem;
+    border-top: 0.1rem solid #f8d8a7;
+}
+
+.item__label span{
+    display: inline-block;
+    width:90%;    
+    transition-duration: .3s;
+}
+
+.item__label i{
+    transition-duration: .5s;
+}
+
+.item__label-img{
+    display: block;
+}
+
+.item__radio{
+    display: none;
+}
+
+.item__radio:checked+.item__label>.item__img{
+    width: 70%;
+    opacity: 1;
+}
+
+.item__radio:checked+.item__label i{
+    transform: rotate(45deg);
+}
+
+.item__radio:checked+.item__label{
+    color:black;
+}
+
+.item__img{
+    padding: .5rem;
+    display: block;
+    opacity: 0;
+    width: 0;
+    margin:auto;
+    transition-duration: .6s;
+}
+
+.item__radio:active+.item__label{
+    opacity: 0.6;
+}
+
+@media screen and (min-width:768px){
+    .header-title{
+        font-size:2.5rem;
+    }
+
+    .container{
+        width:90%;
+        font-size: 2rem;
+    }
+
+    .item__radio:checked+.item__label>.item__img{
+        width: 60%;
+    }
+}
+
+@media screen and (min-width:1280px) {
+    .header-title{
+        font-size:3.75rem;
+    }
+
+    .container{
+        width:70%;
+        font-size: 3rem;
+    }
+
+    .item{
+        border-top: 0.2rem solid #f8d8a7;
+    }
+  
+    .item__radio:checked+.item__label>.item__img{
+        width: 50%;
+    }    
+}
+
+@media(hover:hover){
+    .container, .item, .item__label, .item__img{
+        cursor:pointer;
+    }
+    
+    .container:hover{
+        color:black;
+
+    }
+
+    .container i{
+        opacity: 0;
+    }
+
+    .container:hover i{
+        opacity: 1;
+    }
+
+    .item__radio:hover+.item__label i{
+        transform: rotate(45deg);
+    }
+    
+    .item__radio:hover+.item__label>.item__img{
+        width: 50%;
+        opacity: 1;
+    }
+    
+}
